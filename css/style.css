@@ -542,6 +542,7 @@ a.to_nav:focus {
     color: #44443a;
 }
 
+
 @media only screen and (max-width: 980px) {
 
     html{ width:100%;}
@@ -680,12 +681,39 @@ a.to_nav:focus {
     font-size: 30px;
   }
 
-  header {
-    margin-top:42px;
-  }
+    ul#slide-out.sidenav {
+        background-color: #44443a;
+    }
 
-  .edge {
-    margin-top: -42px;
-  }
+    ul#slide-out.sidenav li.slide-out-item {
+        margin: 0;
+    }
+
+    ul#slide-out.sidenav li.slide-out-sub-item {
+        margin: 0;
+        background-color: #605e51;
+        height: 45px;
+    }
+
+    ul#slide-out.sidenav a {
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        line-height: 45px;
+        color: #ebebdb;
+    }
+
+
+
+
+
+    header {
+        margin-top:42px;
+    }
+
+    .edge {
+        margin-top: -42px;
+    }
 
 }
