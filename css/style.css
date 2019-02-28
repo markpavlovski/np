@@ -23,14 +23,14 @@ body {
 .edge{
 	width: 980px;
 	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
-	padding:0px;
+	padding: 0px;
 	background-image:url(../assets/b_transparent.png);
 	}
 
 .wrap {
 	width: 960px;
 	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
-	padding:0px;
+	padding: 0 10px;
 	background-image: url(../assets/b_tile.jpg);
 
 }
@@ -44,9 +44,9 @@ body {
 }
 
 .head{
-	height: 145px;
-  background:url(../assets/b_top.png) repeat-x center bottom;
-  padding-top: 0px;
+    height: 145px;
+    background:url(../assets/b_top.png) repeat-x center bottom;
+    padding-top: 0px;
 }
 
 
@@ -54,9 +54,7 @@ body {
 
 header {
   position: fixed;
-  width: 980px;
-  box-sizing: border-box;
-  padding: 0px;
+  width: inherit;
 }
 
 #mobile-menu {
@@ -644,7 +642,7 @@ img.rc{
 }
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 780px) {
   .tour {
   	width:100%;
   	display:block;
