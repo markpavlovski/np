@@ -118,7 +118,7 @@ const navItems = [
   {
     id: 'instruction',
     name: 'Instruction',
-    path: '_instruction.html',
+    path: 'instruction.html',
     subItems: [
       {
           name: "Paddling Clinics",
