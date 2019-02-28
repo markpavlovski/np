@@ -30,14 +30,13 @@ body {
 .wrap {
 	width: 960px;
 	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
-	padding: 0 10px;
+	padding: 0;
 	background-image: url(../assets/b_tile.jpg);
-
 }
 
 .content {
 	margin:0px;
-	padding: 0px;
+	padding: 0 20px;
 	width:800px;
 	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
 
@@ -227,7 +226,7 @@ ul, ol, dl {
 	padding: 0;
 	margin: 0;
 }
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
 	margin: 0px;;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
 	padding-right: 15px;
 	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
@@ -412,9 +411,9 @@ img.g{
 
 
 /* LISTS */
-ul
-{
-	list-style-image: url('../assets/leftarrow.png')
+.content ul {
+    list-style-image: url('../assets/leftarrow.png');
+    margin-left: 20px;
 }
 
 li{
@@ -422,21 +421,6 @@ li{
 	line-height:23px;
 	letter-spacing: 1.5;
 }
-
-ul.bullet2
-{
-	list-style-image: url('../images/bullet.gif');
-	text-align:left;
-	font-size: 16px;
-}
-ul.bullet2 li
-{
-	margin:8px 0 0px;
-
-}
-
-
-
 
 
 /* TYPOGRAPHY */
@@ -560,85 +544,84 @@ a.to_nav:focus {
 
 @media only screen and (max-width: 980px) {
 
-html{ width:100%;}
+    html{ width:100%;}
 
-body{
-width:100%;
-padding:0;
-margin:0;
-background-color: #000000;
-}
+    body{
+    width:100%;
+    padding:0;
+    margin:0;
+    background-color: #000000;
+    }
 
-.edge{
-border:0;
-width:100%;
-}
-.wrap{
-border:0;
-width:100%;
-}
-.content{
-border:0;
-width:100%;
-}
-.head{
-border:0;
-width:100%;
-}
+    .edge{
+    border:0;
+    width:100%;
+    }
+    .wrap{
+    border:0;
+    width:100%;
+    }
+    .content{
+    border:0;
+    width:100%;
+    }
+    .head{
+    border:0;
+    width:100%;
+    }
 
-#header-logo {
-	margin-top: -35px !important;
-	margin-bottom: -30px;
-}
+    #header-logo {
+        margin-top: -35px !important;
+        margin-bottom: -30px;
+    }
 
-.scale{
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-}
-.scalec{
-  display: block;
-  margin: 0 auto 25px;
-  max-width: 100%;
-  height: auto;
-}
-.scaleb{
-	float:none;
-  display: block;
-  margin: 0 auto 15px;
-  max-width: 100%;
-  height: auto;
-}
-.tour{
-	margin: 0 auto 30px;
-	float:none;
-}
-.tour{
-	width: 100%;
-	margin: 0 auto 10px;
-	float:none;
-}
-img.rc{
-	border:0;
-	width: 500px;
-	height: auto;
-	margin:0 auto 20px;
-	float:none;
-	}
+    .scale{
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+    .scalec{
+      display: block;
+      margin: 0 auto 25px;
+      max-width: 100%;
+      height: auto;
+    }
+    .scaleb{
+        float:none;
+      display: block;
+      margin: 0 auto 15px;
+      max-width: 100%;
+      height: auto;
+    }
+    .tour{
+        margin: 0 auto 30px;
+        float:none;
+    }
+    .tour{
+        width: 100%;
+        margin: 0 auto 10px;
+        float:none;
+    }
+    img.rc{
+        border:0;
+        width: 500px;
+        height: auto;
+        margin:0 auto 20px;
+        float:none;
+        }
 
-.rules{
-	width:100%;
-	float: none;
-	padding:0;
-	margin: 0 0 10px;
-	}
-.sessions{
-	display:block;
-	width:100%;
+    .rules{
+        width:100%;
+        float: none;
+        padding:0;
+        margin: 0 0 10px;
+        }
+    .sessions{
+        display:block;
+        width:100%;
 
-}
-
+    }
 }
 
 
