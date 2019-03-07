@@ -416,7 +416,7 @@ img.g{
     margin-left: 40px;
 }
 
-li{
+.content li{
 	margin:0px 0px 15px;
 	line-height:23px;
 	letter-spacing: 1.5;
@@ -434,28 +434,28 @@ h1{
 	line-height:1;
 	letter-spacing:1.5;
 	}
-h2{
+.content h2{
 	font-family: 'Markazi Text', serif;
 	font-weight:normal;
 	font-size:42px;
 	line-height:1;
 	margin:10px 0 15px;
 	}
-h2.nm{
+.content h2.nm{
 	font-family: 'Markazi Text', serif;
 	font-weight:normal;
 	font-size:42px;
 	line-height:1;
 	margin:0;
 	}
-h3{
+.content h3{
 	font-family: 'Markazi Text', serif;
 	font-size:32px;
 	margin: 30px 0 15px;
 	font-weight:normal;
 	text-transform:uppercase;
 	}
-h4{
+.content h4{
 	margin: 15px 0;
 	text-transform:uppercase;
 	font-size:18px;
@@ -468,14 +468,14 @@ h4{
 }
 
 
-p{
+.content p{
 	margin:0px 0px 15px;
 	line-height:23px;
 	letter-spacing:1.5;}
 
 
 
-p.ind{
+.content p.ind{
 		text-indent:20px;
 }
 
