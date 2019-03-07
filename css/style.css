@@ -36,7 +36,7 @@ body {
 
 .content {
 	margin:0px;
-	padding: 0 20px;
+	padding: 0 0px;
 	width:800px;
 	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
 
@@ -226,7 +226,7 @@ ul, ol, dl {
 	padding: 0;
 	margin: 0;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
 	margin: 0px;;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
 	padding-right: 15px;
 	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
@@ -413,7 +413,7 @@ img.g{
 /* LISTS */
 .content ul {
     list-style-image: url('../assets/leftarrow.png');
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 li{
