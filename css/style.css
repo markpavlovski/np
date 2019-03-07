@@ -34,6 +34,10 @@ body {
 	background-image: url(../assets/b_tile.jpg);
 }
 
+.wrap.empty-sub-nav {
+    margin-top: -24px;
+}
+
 .content {
 	margin:0px;
 	padding: 0 0px;
@@ -54,6 +58,10 @@ body {
 header {
   position: fixed;
   width: inherit;
+}
+
+header.empty-sub-nav {
+    margin-top: 24px;
 }
 
 #mobile-menu {
@@ -117,6 +125,10 @@ header {
   justify-content: center;
   background-color: #68685b;
   min-height: 33px;
+}
+
+#menu ul.sub-nav-items.empty-sub-nav {
+    min-height: 8px;
 }
 
 
@@ -708,12 +720,17 @@ a.to_nav:focus {
 
 
 
-    header {
+    header, header.empty-sub-nav {
         margin-top:42px;
     }
-
     .edge {
         margin-top: -42px;
     }
+
+    /*header.empty-sub-nav{*/
+        /*margin-top:42px;*/
+    /*}*/
+
+
 
 }
