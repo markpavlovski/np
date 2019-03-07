@@ -460,7 +460,7 @@ h4{
 	text-transform:uppercase;
 	font-size:18px;
 	text-align:center;}
-h5{
+.content h5{
 	margin: 5px 0;
 	font-weight:bold;
 	font-size:18px;
