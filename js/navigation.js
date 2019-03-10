@@ -10,12 +10,12 @@ const renderMenu = (id) => {
   const navElement = document.querySelector('.main-nav-items');
   const subNavElement = document.querySelector('.sub-nav-items');
   const slideOut = document.querySelector('#slide-out');
-  const activeItem = navItems.find(el => el.id === id);
+  const activeItem = navItems.find(el => el.id === id) || {};
   navElement ? navElement.innerHTML = `
         ${navItems.map(item => renderItem(item, activeItem)).join('')}
   ` : ''
   subNavElement ? subNavElement.innerHTML = `
-        ${activeItem.subItems.map(item => renderSubItem(item)).join('')}
+        ${activeItem && activeItem.subItems && activeItem.subItems.map(item => renderSubItem(item)).join('')}
   ` : ''
   console.log(slideOut, 'sddd')
   slideOut ? slideOut.innerHTML = `
@@ -54,6 +54,7 @@ const renderSubItem = (subItem) => {
 }
 
 const renderSlideOut = (item, activeItem) => {
+  console.log(item, activeItem)
   return `
   <li class='slide-out-item'><a href='${item.path}'>${item.name}</a></li>
   ${item.id === activeItem.id ? item.subItems.map(subItem => `<li class='slide-out-sub-item'><a href="${item.path + subItem.anchor}">${subItem.name}</a></li>`).join('') : ''}
@@ -66,9 +67,9 @@ const renderBottomMenu = (id) => {
   navElement ? navElement.innerHTML = `
         ${bottomNavItems.map(item => renderBottomItem(item, activeItem)).join('')}
   ` : ''
-  slideOut ? slideOut.innerHTML = `
-    ${navItems.map(item => renderSlideOut(item, activeItem)).join('')}
-  ` : ''
+  // slideOut ? slideOut.innerHTML = `
+  //   ${navItems.map(item => renderSlideOut(item, activeItem)).join('')}
+  // ` : ''
 }
 
 const navItems = [
