@@ -55,7 +55,7 @@ const renderSubItem = (subItem) => {
 
 const renderSlideOut = (item, activeItem) => {
   return `
-  <li class='slide-out-item'><a href='${item.path}'>${item.name}</a></li>
+  <li class='slide-out-item ${item.id === activeItem.id ? 'active-slide-out-item' : ''}'><a href='${item.path}'>${item.name}</a></li>
   ${item.id === activeItem.id && item && item.subItems ? item.subItems.map(subItem => `<li class='slide-out-sub-item'><a href="${item.path + subItem.anchor}">${subItem.name}</a></li>`).join('') : ''}
   `
 }

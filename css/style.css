@@ -705,6 +705,10 @@ a.to_nav:focus {
         margin: 0;
     }
 
+    ul#slide-out.sidenav li.slide-out-item.active-slide-out-item {
+        background-color: #3d3d36;
+    }
+
     ul#slide-out.sidenav li.slide-out-sub-item {
         margin: 0;
         background-color: #605e51;
