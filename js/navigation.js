@@ -40,7 +40,6 @@ const renderBottomItem = (navItem, activeItem) => {
     <li class="bottom-nav-item">
       <div class="flex-holder">
         <a href="${navItem.path}">${navItem.name}</a>
-        ${true || activeItem && navItem.id === activeItem.id ? `<div class="tick"/>` : ''}
       </div>
     </li>
   `
@@ -171,21 +170,21 @@ const bottomNavItems = [
   {
     id: 'about-us',
     name: 'About Us',
-    path: 'index.html',
+    path: 'about-us.html',
   },
   {
     id: 'employment',
     name: 'Employment',
-    path: 'index.html',
+    path: 'careers.html',
   },
   {
     id: 'events',
     name: 'Events',
-    path: 'index.html',
+    path: 'events.html',
   },
   {
     id: 'forms',
     name: 'Forms',
-    path: 'index.html',
+    path: 'forms.html',
   }
 ]
