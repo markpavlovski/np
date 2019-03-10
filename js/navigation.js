@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
    var elems = document.querySelectorAll('.sidenav');
    const options = null;
-   console.log(elems)
-   console.log(M)
    var instances = M.Sidenav.init(elems, options);
  });
 
@@ -56,7 +54,6 @@ const renderSubItem = (subItem) => {
 }
 
 const renderSlideOut = (item, activeItem) => {
-  console.log(item, activeItem)
   return `
   <li class='slide-out-item'><a href='${item.path}'>${item.name}</a></li>
   ${item.id === activeItem.id ? item && item.subItems && item.subItems.map(subItem => `<li class='slide-out-sub-item'><a href="${item.path + subItem.anchor}">${subItem.name}</a></li>`).join('') : ''}
@@ -69,9 +66,6 @@ const renderBottomMenu = (id) => {
   navElement ? navElement.innerHTML = `
         ${bottomNavItems.map(item => renderBottomItem(item, activeItem)).join('')}
   ` : ''
-  // slideOut ? slideOut.innerHTML = `
-  //   ${navItems.map(item => renderSlideOut(item, activeItem)).join('')}
-  // ` : ''
 }
 
 const navItems = [
