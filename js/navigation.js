@@ -1,39 +1,45 @@
-document.addEventListener('DOMContentLoaded', function() {
-   var elems = document.querySelectorAll('.sidenav');
-   const options = null;
-   var instances = M.Sidenav.init(elems, options);
- });
+document.addEventListener("DOMContentLoaded", function() {
+  var elems = document.querySelectorAll(".sidenav");
+  const options = null;
+  var instances = M.Sidenav.init(elems, options);
+});
 
 const renderMenu = (id) => {
-  const navElement = document.querySelector('.main-nav-items');
-  const subNavElement = document.querySelector('.sub-nav-items');
-  const slideOut = document.querySelector('#slide-out');
-  const activeItem = navItems.find(el => el.id === id) || {};
-  const activeBottomItem = bottomNavItems.find(el => el.id === id) || {};
+  const navElement = document.querySelector(".main-nav-items");
+  const subNavElement = document.querySelector(".sub-nav-items");
+  const slideOut = document.querySelector("#slide-out");
+  const activeItem = navItems.find((el) => el.id === id) || {};
+  const activeBottomItem = bottomNavItems.find((el) => el.id === id) || {};
 
-  navElement ? navElement.innerHTML = `
-        ${navItems.map(item => renderItem(item, activeItem)).join('')}
-  ` : ''
-  subNavElement ? subNavElement.innerHTML = `
-        ${activeItem && activeItem.subItems ? activeItem.subItems.map(item => renderSubItem(item)).join('') : ''}
-  ` : ''
+  navElement
+    ? (navElement.innerHTML = `
+        ${navItems.map((item) => renderItem(item, activeItem)).join("")}
+  `)
+    : "";
+  subNavElement
+    ? (subNavElement.innerHTML = `
+        ${activeItem && activeItem.subItems ? activeItem.subItems.map((item) => renderSubItem(item)).join("") : ""}
+  `)
+    : "";
 
-  slideOut ? slideOut.innerHTML = `
-    ${navItems.map(item => renderSlideOut(item, activeItem)).join('')}
-    ${bottomNavItems.map(item => renderSlideOut(item, activeBottomItem)).join('')}
-  ` : ''
-}
+  slideOut
+    ? (slideOut.innerHTML = `
+    ${navItems.map((item) => renderSlideOut(item, activeItem)).join("")}
+    ${bottomNavItems.map((item) => renderSlideOut(item, activeBottomItem)).join("")}
+  `)
+    : "";
+};
 
 const renderItem = (navItem, activeItem) => {
   return `
     <li class="main-nav-item">
       <div class="flex-holder">
         <a href="${navItem.path}">${navItem.name}</a>
-        ${activeItem && navItem.id === activeItem.id ? `<div class="tick"/>` : ''}
+        ${activeItem && navItem.id === activeItem.id ? `<div class="tick"/>` : ""}
       </div>
     </li>
-  `
-}
+  `;
+};
 
 const renderBottomItem = (navItem, activeItem) => {
   return `
@@ -42,37 +48,45 @@ const renderBottomItem = (navItem, activeItem) => {
         <a href="${navItem.path}">${navItem.name}</a>
       </div>
     </li>
-  `
-}
+  `;
+};
 
 const renderSubItem = (subItem) => {
   return `
   <li class="sub-nav-item">
     <a href="${subItem.anchor}">${subItem.name}</a>
   </li>
-  `
-}
+  `;
+};
 
 const renderSlideOut = (item, activeItem) => {
   return `
-  <li class='slide-out-item ${item.id === activeItem.id ? 'active-slide-out-item' : ''}'><a href='${item.path}'>${item.name}</a></li>
-  ${item.id === activeItem.id && item && item.subItems ? item.subItems.map(subItem => `<li class='slide-out-sub-item'><a href="${item.path + subItem.anchor}">${subItem.name}</a></li>`).join('') : ''}
-  `
-}
+  <li class='slide-out-item ${item.id === activeItem.id ? "active-slide-out-item" : ""}'><a href='${item.path}'>${item.name}</a></li>
+  ${
+    item.id === activeItem.id && item && item.subItems
+      ? item.subItems
+          .map((subItem) => `<li class='slide-out-sub-item'><a href="${item.path + subItem.anchor}">${subItem.name}</a></li>`)
+          .join("")
+      : ""
+  }
+  `;
+};
 
 const renderBottomMenu = (id) => {
-  const navElement = document.querySelector('.bottom-nav-items');
-  const activeItem = bottomNavItems.find(el => el.id === id);
-  navElement ? navElement.innerHTML = `
-        ${bottomNavItems.map(item => renderBottomItem(item, activeItem)).join('')}
-  ` : ''
-}
+  const navElement = document.querySelector(".bottom-nav-items");
+  const activeItem = bottomNavItems.find((el) => el.id === id);
+  navElement
+    ? (navElement.innerHTML = `
+        ${bottomNavItems.map((item) => renderBottomItem(item, activeItem)).join("")}
+  `)
+    : "";
+};
 
 const navItems = [
   {
-    id: 'rentals',
-    name: 'Rentals',
-    path: 'index.html',
+    id: "rentals",
+    name: "Rentals",
+    path: "index.html",
     subItems: [
       {
         name: "Rental Rates",
@@ -93,9 +107,9 @@ const navItems = [
     ]
   },
   {
-    id: 'tours',
-    name: 'Tours',
-    path: 'tours.html',
+    id: "tours",
+    name: "Tours",
+    path: "tours.html",
     subItems: [
       {
         name: "Nature Tours",
@@ -112,76 +126,76 @@ const navItems = [
     ]
   },
   {
-    id: 'instruction',
-    name: 'Instruction',
-    path: 'instruction.html',
+    id: "instruction",
+    name: "Instruction",
+    path: "instruction.html",
     subItems: [
       {
-          name: "Paddling Clinics",
-          anchor: "#paddling-clinics"
+        name: "Paddling Clinics",
+        anchor: "#paddling-clinics"
       },
       {
-          name: "Private Lessons",
-              anchor: "#private-lessons"
-      },
+        name: "Private Lessons",
+        anchor: "#private-lessons"
+      }
     ]
   },
   {
-    id: 'camp',
-    name: 'River Camp',
-    path: 'river-camp.html',
+    id: "camp",
+    name: "River Camp",
+    path: "river-camp.html",
     subItems: [
       {
-          name: "Which Session is for me?",
-          anchor: "#sessions"
+        name: "Which Session is for me?",
+        anchor: "#sessions"
       },
       {
-          name: "Dates & Prices",
-          anchor: "#dates-prices"
+        name: "Dates & Prices",
+        anchor: "#dates-prices"
       },
       {
-          name: "About River Camp",
-          anchor: "#about-camp"
+        name: "About River Camp",
+        anchor: "#about-camp"
       },
-	  {
-          name: "Testimonials",
-          anchor: "#testimonials"
-      },
+      {
+        name: "Testimonials",
+        anchor: "#testimonials"
+      }
     ]
   },
   {
-    id: 'education',
-    name: 'River Classroom',
-    path: 'river-classroom.html',
+    id: "education",
+    name: "River Classroom",
+    path: "river-classroom.html",
     subItems: []
   },
   {
-    id: 'directions',
-    name: 'Directions',
-    path: 'directions.html',
+    id: "directions",
+    name: "Directions",
+    path: "directions.html",
     subItems: []
   }
-]
+];
 
 const bottomNavItems = [
   {
-    id: 'about-us',
-    name: 'About Us',
-    path: 'about-us.html',
+    id: "about-us",
+    name: "About Us",
+    path: "about-us.html"
   },
   {
-    id: 'employment',
-    name: 'Employment',
-    path: 'careers.html',
+    id: "employment",
+    name: "Employment",
+    path: "careers.html"
   },
   {
-    id: 'events',
-    name: 'Events',
-    path: 'events.html',
+    id: "events",
+    name: "Events",
+    path: "events.html"
   },
   {
-    id: 'forms',
-    name: 'Forms',
-    path: 'forms.html',
+    id: "forms",
+    name: "Forms",
+    path: "forms.html"
   }
-]
+];
