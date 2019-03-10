@@ -32,6 +32,7 @@ body {
 	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
 	padding: 0;
 	background-image: url(../assets/b_tile.jpg);
+    min-height: 100vh;
 }
 
 .wrap.empty-sub-nav {
@@ -43,7 +44,6 @@ body {
 	padding: 0 0px;
 	width:800px;
 	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
-
 }
 
 .head{
