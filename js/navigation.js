@@ -15,7 +15,7 @@ const renderMenu = (id) => {
         ${navItems.map(item => renderItem(item, activeItem)).join('')}
   ` : ''
   subNavElement ? subNavElement.innerHTML = `
-        ${activeItem && activeItem.subItems && activeItem.subItems.map(item => renderSubItem(item)).join('')}
+        ${activeItem && activeItem.subItems ? activeItem.subItems.map(item => renderSubItem(item)).join('') : ''}
   ` : ''
 
   slideOut ? slideOut.innerHTML = `
@@ -56,7 +56,7 @@ const renderSubItem = (subItem) => {
 const renderSlideOut = (item, activeItem) => {
   return `
   <li class='slide-out-item'><a href='${item.path}'>${item.name}</a></li>
-  ${item.id === activeItem.id ? item && item.subItems && item.subItems.map(subItem => `<li class='slide-out-sub-item'><a href="${item.path + subItem.anchor}">${subItem.name}</a></li>`).join('') : ''}
+  ${item.id === activeItem.id && item && item.subItems ? item.subItems.map(subItem => `<li class='slide-out-sub-item'><a href="${item.path + subItem.anchor}">${subItem.name}</a></li>`).join('') : ''}
   `
 }
 
