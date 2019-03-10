@@ -11,16 +11,18 @@ const renderMenu = (id) => {
   const subNavElement = document.querySelector('.sub-nav-items');
   const slideOut = document.querySelector('#slide-out');
   const activeItem = navItems.find(el => el.id === id) || {};
+  const activeBottomItem = bottomNavItems.find(el => el.id === id) || {};
+
   navElement ? navElement.innerHTML = `
         ${navItems.map(item => renderItem(item, activeItem)).join('')}
   ` : ''
   subNavElement ? subNavElement.innerHTML = `
         ${activeItem && activeItem.subItems && activeItem.subItems.map(item => renderSubItem(item)).join('')}
   ` : ''
-  console.log(slideOut, 'sddd')
+
   slideOut ? slideOut.innerHTML = `
     ${navItems.map(item => renderSlideOut(item, activeItem)).join('')}
-    ${bottomNavItems.map(item => renderSlideOut(item, activeItem)).join('')}
+    ${bottomNavItems.map(item => renderSlideOut(item, activeBottomItem)).join('')}
   ` : ''
 }
 
@@ -57,7 +59,7 @@ const renderSlideOut = (item, activeItem) => {
   console.log(item, activeItem)
   return `
   <li class='slide-out-item'><a href='${item.path}'>${item.name}</a></li>
-  ${item.id === activeItem.id ? item.subItems.map(subItem => `<li class='slide-out-sub-item'><a href="${item.path + subItem.anchor}">${subItem.name}</a></li>`).join('') : ''}
+  ${item.id === activeItem.id ? item && item.subItems && item.subItems.map(subItem => `<li class='slide-out-sub-item'><a href="${item.path + subItem.anchor}">${subItem.name}</a></li>`).join('') : ''}
   `
 }
 
