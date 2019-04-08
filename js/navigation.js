@@ -1,7 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var elems = document.querySelectorAll(".sidenav");
-  const options = null;
-  var instances = M.Sidenav.init(elems, options);
+  const elem = document.querySelectorAll(".sidenav");
+  M.Sidenav.init(elem, null);
+
+  const slideOutElement = document.querySelector('#slide-out')
+  const sideNavInstance = M.Sidenav.getInstance(slideOutElement)
+  slideOutElement.addEventListener("click", (e)=>{
+    sideNavInstance.close()
+  })
+
 });
 
 const renderMenu = (id) => {
@@ -60,6 +66,8 @@ const renderSubItem = (subItem) => {
 };
 
 const renderSlideOut = (item, activeItem) => {
+
+
   return `
   <li class='slide-out-item ${item.id === activeItem.id ? "active-slide-out-item" : ""}'><a href='${item.path}'>${item.name}</a></li>
   ${
@@ -146,7 +154,7 @@ const navItems = [
     path: "river-camp.html",
     subItems: [
       {
-        name: "Which Session is for me?",
+        name: "Sessions",
         anchor: "#sessions"
       },
       {
