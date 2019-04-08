@@ -147,7 +147,6 @@ header.empty-sub-nav {
 
 img#header-logo {
   margin-top: -66px;
-  margin-bottom: -30px;
 }
 
 /* ~~ The footer ~~ */
@@ -454,7 +453,7 @@ img.g {
   font-size: 55px;
   font-weight: 300;
   margin: 10px 0px 25px;
-  line-height: 1;
+  line-height: .75;
   letter-spacing: 1.5;
 }
 .content h2 {
@@ -564,7 +563,6 @@ a.to_nav:focus {
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: #000000;
   }
 
   .edge {
