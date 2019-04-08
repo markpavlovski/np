@@ -345,6 +345,10 @@ a.button:hover {
   display: block;
   margin: 0 auto;
 }
+.anchor-block {
+	display: block;
+	height: 65px;
+}
 
 /* SET UPS */
 .tour {
@@ -444,7 +448,7 @@ img.g {
 
 /* TYPOGRAPHY */
 
-h1 {
+.content h1 {
   font-family: "Markazi Text", serif;
   text-align: center;
   font-size: 55px;
@@ -582,7 +586,7 @@ a.to_nav:focus {
 
   #header-logo {
     margin-top: -35px !important;
-    margin-bottom: -30px;
+    margin-bottom: 0px;
   }
 
   .scale {
