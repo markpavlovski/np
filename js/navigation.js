@@ -202,8 +202,13 @@ const bottomNavItems = [
     path: "events.html"
   },
   {
-    id: "forms",
-    name: "Forms",
-    path: "forms.html"
+      id: "forms",
+      name: "Forms",
+      path: "forms.html"
+  },
+  {
+      id: "boat-sale",
+      name: "Boat Sale",
+      path: "boat-sale.html"
   }
 ];
