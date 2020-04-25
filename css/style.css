@@ -691,6 +691,10 @@ a.to_nav:focus {
   img.acorn {
     display: none;
   }
+  
+  #banner {
+    padding: 100px 20px 20px;
+  }
 
   #banner {
     padding: 100px 20px 20px;
