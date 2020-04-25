@@ -48,7 +48,29 @@ body {
 .head {
   height: 145px;
   background: url(../assets/b_top.png) repeat-x center bottom;
-  padding-top: 0px;
+  padding-top: 0;
+}
+
+
+#banner {
+  padding: 90px 20px 20px;
+  background-color: #fff;
+  margin: 0 0px -71px;
+  border-bottom: 4px solid #68685b;
+}
+
+#banner #additional-details {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+#banner #additional-details.hidden {
+  display: none;
+}
+
+
+#banner #details-toggle-button {
+  cursor: pointer;
 }
 
 /* ~~ the header is not given a width. It will extend the full width of your layout. ~~ */
@@ -582,6 +604,11 @@ a.to_nav:focus {
     width: 100%;
   }
 
+
+  #banner {
+    padding: 90px 20px 20px;
+  }
+
   #header-logo {
     margin-top: -35px !important;
     margin-bottom: 0px;
@@ -640,7 +667,7 @@ a.to_nav:focus {
     width: 100%;
     display: block;
     float: none;
-    margin: 0 autp 30px;
+    margin: 0 auto 30px;
   }
   img.rc {
     border: 0;
@@ -663,6 +690,10 @@ a.to_nav:focus {
   }
   img.acorn {
     display: none;
+  }
+  
+  #banner {
+    padding: 100px 20px 20px;
   }
 
   #menu {

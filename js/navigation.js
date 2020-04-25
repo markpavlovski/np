@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
   const sideNavInstance = M.Sidenav.getInstance(slideOutElement)
   slideOutElement.addEventListener("click", (e)=>{
     sideNavInstance.close()
-  })
+  });
+
+  handleBanner();
 
 });
 
@@ -212,3 +214,56 @@ const bottomNavItems = [
       path: "boat-sale.html"
   }
 ];
+
+const handleBanner = () => {
+  const SHOW_MORE_BUTTON_TEXT = "Show more";
+  const SHOW_LESS_BUTTON_TEXT = "Show less";
+
+
+  const wrap = document.querySelector('.wrap');
+  wrap.innerHTML = `
+      <div id="banner">
+          <b>Covid 19 Response:</b>
+          Because of the recent circumstances we will have to be making some changes to how we run our rental stand this summer. We hope we can give everyone the opportunity to go out on the water, but we will have to find a way to do so safely.
+
+          <div id="additional-details" class="hidden">
+          We know how important getting out into nature and enjoying the outdoors is, especially during this stressful time. We love being the intermediary between people and nature, and we hope we can find a way to do this safely at some point this year.
+<br>
+<br>
+Our number one priority has to be the safety of our staff and our customers. As we learn more we will be able to make more decisions about how to safely get people out on the water. We will have to make adjustments and update our policies as we go, and we will make sure to share updates as we learn more.
+<br>
+<br>
+We hope you can find a way to get outside and enjoy nature, while practicing social distancing and staying safe. Please be kind to each other, be respectful of the essential workers who are on the front lines every day, make it easier on our health care workers by following the recommendations of the CDC. We will get through this together and find ways to spread joy no matter what the circumstances.
+<br><br><br>
+
+
+
+
+We are thinking of how to run our summer camps safely this year. We know that our campers look forward to seeing each other and adventuring out on the river all year. We hope that by the summer we will be able to find a way to run our camps, but our number one priority will have to be the safety of our campers and staff. 
+<br><br>
+
+We will be taking deposits to reserve spaces in our camps in case the situation improves and we are able to find a way to safely run our programs. If we are unable to run our camps we will return everyone's deposits, but we are optimistic we will be able to figure out a safe solution. We are consulting with a camp doctor who will make recommendations for us on whether it is possible and ways that we can do so safely.
+<br><br>
+
+We love our campers and we hope everyone is healthy and finding ways to stay positive and active despite the situation.
+</div>
+          <b><a id="details-toggle-button"></a></b>
+        </div>
+      ` + wrap.innerHTML;
+  const button = document.querySelector('#details-toggle-button');
+  const detailsBlock = document.querySelector('#additional-details');
+  button.innerText = SHOW_MORE_BUTTON_TEXT;
+
+  button.addEventListener("click", (e)=>{
+    e.preventDefault();
+    if (button.innerText === SHOW_MORE_BUTTON_TEXT){
+      button.innerText = SHOW_LESS_BUTTON_TEXT;
+      detailsBlock.classList.toggle('hidden');
+    } else {
+      button.innerText = SHOW_MORE_BUTTON_TEXT;
+      detailsBlock.classList.toggle('hidden');
+    }
+  });
+
+
+};
