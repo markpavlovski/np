@@ -1,0 +1,124 @@
+body
+{
+	background-image: url(../images/tile_page.gif);
+	background-attachment: scroll;
+	height:100%;
+	font-family: Palatino Linotype;
+	margin-bottom:100px;
+	margin-top: 0px;
+}
+
+div.main
+{
+	margin-left: 204px;
+	text-align: left;
+	
+	
+}
+
+div.left
+{
+  height:inherit;
+  width: 150px;
+  float: left;
+  padding: 30px;
+  line-height: 30px;
+  font-size: 16px;
+  font-family: Times;
+}
+
+div.bottom
+{
+	text-align: center;
+	padding: 1px;
+	font-size: 17px;
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:52px;
+	background-image: url(../images/tile_base.gif);
+	text-decoration: none; 
+}
+
+div.fixed
+{
+	position:static;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:75px;
+	background-image: url(../images/view3.gif);
+}
+
+h1
+{
+  text-align: center;
+} 
+
+ul
+{
+	list-style-type: none;
+	text-align: center;
+}
+
+ul.bullet
+{
+  list-style-image: url('../images/bullet.gif');
+}
+
+ul.bullet2
+{
+	list-style-image: url('../images/bullet.gif');
+	text-align: left;
+	font-size: 16px;
+}
+ul.bullet2 li
+{
+	margin:0 0 0px; 
+	
+}
+
+
+
+
+p.n
+{
+  background-color: #ffffcc;
+}
+
+td 
+{
+	text-align: center;
+	font-size: medium;
+}
+
+img.center 
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.center 
+{
+  text-align:center;
+}
+
+
+img.rc{
+	border:8px solid #fff;
+	display:block;
+	width: 325px;
+	height: 250px;
+	}
+	
+	
+	
+	/*added today*/
+div.maint{	
+	display:block;
+	width:800px;
+	margin:0px auto;
+	
+}

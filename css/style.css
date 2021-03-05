@@ -681,6 +681,10 @@ a.to_nav:focus {
     display: block;
     margin: 0 auto 15px;
   }
+  img.mobilefit {
+    display: block;
+    width: 100%;
+  }
   .b_nav a {
     display: inline-block;
     padding: 3px 7px;
@@ -770,3 +774,7 @@ a.to_nav:focus {
     border: 0;
   }
 }
+  img.mobilefit {
+    display: block;
+    width: 100%;
+  }

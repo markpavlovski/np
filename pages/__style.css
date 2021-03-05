@@ -1,0 +1,624 @@
+@charset "UTF-8";
+/* CSS Document */
+
+html { 
+  background: url(../img/b_image.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	height:100%;
+	width: 100%;
+	margin:0;
+	padding: 0;
+	color: #414141;
+}
+
+.edge{
+	width: 980px;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+	padding:0px;
+	background-image:url(../img/b_transparent.png);	
+	}
+
+.wrap {
+	width: 960px;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+	padding:0px;
+	background-image: url(../img/b_tile.jpg);
+
+}
+
+.content {
+	margin:0px;
+	padding: 0px;
+	width:800px;	
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+
+}
+
+.head{
+	background:url(../img/b_top.gif) repeat-x;
+	}
+
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 0;
+	margin:0px;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+}
+
+div.bottom
+{
+	padding:0px;
+	margin: 0;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:52px;
+	background-image: url(../images/tile_base.gif);
+	}
+	
+.sidebar1 {
+	float: left;
+	width: 170px;
+	height:100%;
+	padding:30px 20px 40px 0px;
+}
+
+
+ul, ol, dl { 
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0px;;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color:#060;
+	font-weight:bold;
+	text-decoration: none; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color:#060;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+	color:#339;
+}
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+
+
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The logo and contact info ~~ */
+
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.center{
+	display:block;
+	margin:0 auto;}
+
+
+/* SET UPS */
+.tour{
+	width:400px;
+	display:block; 
+	float:right;
+	margin: 0 0 30px;
+	}
+.rules{
+	width:325px;
+	float: right;
+	padding:0px;
+	margin: 0 0 10px;
+	}
+
+
+
+
+/* TABLES */
+.sessions{
+	display:block;
+	width:600px;
+	margin:0 auto;
+	background-image:url(../img/b_transparent.png);
+	}
+.sessionst{
+	background-color:#487637;
+	color:#fff;
+	text-align:center;
+	padding:7px 5px;
+	}	
+.sessionsi{
+	display:block;
+	width:150px;
+	padding: 10px 15px;
+	font-size:18px;
+	float:left;}	
+
+
+
+
+/* IMAGES */
+.scale{}
+.scalec{
+display:block;
+	margin:0 auto 25px;
+}
+.scaleb{
+	margin:0px 30px 40px 0;
+	float:left;
+}
+img.rc{
+	border:8px solid #fff;
+	display:block;
+	width: 350px;
+	height: 250px;
+	float:left;
+	margin:0 15px 20px 0;
+	
+	-moz-box-shadow: 3px 3px 4px #999; /* Firefox */
+ -webkit-box-shadow: 3px 3px 4px #999; /* Safari/Chrome */
+ box-shadow: 3px 3px 4px #999; /* Opera and other CSS3 supporting browsers */
+ -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999')";/* IE 8 */
+ : progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999');/* IE 5.5 - 7 */ 
+	}
+
+img.bs{
+	border:8px solid #fff;
+	display:block;
+	width: 300px;
+	height: 300px;
+	-moz-box-shadow: 3px 3px 4px #999; /* Firefox */
+ -webkit-box-shadow: 3px 3px 4px #999; /* Safari/Chrome */
+ box-shadow: 3px 3px 4px #999; /* Opera and other CSS3 supporting browsers */
+ -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999')";/* IE 8 */
+ : progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#999999');/* IE 5.5 - 7 */ 
+	}
+
+img.g{
+	float:left;
+	margin: 0 25px 15px 0;
+	}
+
+
+
+/* LISTS */
+
+ul.bullet2
+{
+	list-style-image: url('../images/bullet.gif');
+	text-align:left;
+	font-size: 16px;
+	line-height:27px
+}
+ul.bullet2 li
+{
+	margin:0 0 0px; 
+	line-height:27px
+}
+
+
+
+
+
+/* TYPOGRAPHY */
+
+h1{	font-family: 'Tinos', serif;	
+	text-align:center;
+	font-size:42px;
+	font-weight:300;
+	margin: 10px 0px 25px;
+	line-height:1;
+	letter-spacing:1.5;
+	}	
+h2{		font-family: 'Tinos', serif;	
+	font-weight:normal;
+	font-size:28px;
+	line-height:1;
+	margin:0 0 15px;
+	}
+h2.nm{		font-family: 'Tinos', serif;	
+	font-weight:normal;
+	font-size:28px;
+	line-height:1;
+	margin:0;
+	}	
+h3{		font-family: 'Tinos', serif;	
+	font-size:24px;
+	margin: 30px 0 15px;
+	font-weight:normal;	
+	text-transform:uppercase;
+	}
+h4{
+	margin: 15px 0;
+	text-transform:uppercase;
+	font-size:18px;
+	text-align:center;
+	}
+h5{
+	font-weight:bold;
+	font-size:18px;
+	}
+p{
+	margin:0px 0px 15px;
+	line-height:27px;
+	}
+		
+		
+		
+p.ind{
+		text-indent:20px;
+}
+
+
+
+
+
+
+
+
+/* NAVIGATION */
+
+
+
+a.to_nav {
+    float: right;
+    color: #fff;
+    background: #4e4e4e;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+    height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+ 
+a.to_nav:hover,
+a.to_nav:focus {
+    color: #1c1c1c;
+    background: #ccc;
+}
+
+#primary_nav li.top {
+    display: none;
+}
+
+
+
+
+.b_nav{
+    list-style:none;
+    margin:0;
+    padding:5px 0 0;
+    text-align:center;
+}
+.b_nav li{
+    display:inline;
+	text-decoration: none; 
+	}
+	
+.b_nav a{
+    display:inline-block;
+    padding:10px;
+	text-decoration: none;
+	color:#333;
+	line-height:1;
+}
+
+.b_nav a:hover{
+    color: #060;
+}
+	
+@media only screen and (max-width: 768px) {
+
+html{ width:100%;} 
+
+body{ 
+width:100%; 
+padding:0; 
+margin:0; 
+background-color: #000000; 
+}
+
+.edge{
+border:0; 
+width:100%; 
+}
+.wrap{
+border:0; 
+width:100%; 
+}
+.content{
+border:0; 
+width:100%; 
+}
+.head{
+border:0; 
+width:100%; 
+}
+
+.scale{  
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;        
+  height: auto; 
+}
+.scalec{  
+  display: block;
+  margin: 0 auto 25px;
+  max-width: 100%;        
+  height: auto; 
+}
+.scaleb{
+	float:none;  
+  display: block;
+  margin: 0 auto 15px;
+  max-width: 100%;        
+  height: auto; 
+}
+.tour{
+	margin: 0 auto 30px;
+	float:none;
+}
+.tour{
+	width: 100%;
+	margin: 0 auto 10px;
+	float:none;
+}
+img.rc{
+	border:0;
+	width: 500px;
+	height: auto;
+	margin:0 auto 20px;
+	float:none;
+	}	
+
+.rules{
+	width:100%;
+	float: none;
+	padding:0;
+	margin: 0 0 10px;
+	}
+.sessions{
+	display:block;
+	width:100%;	
+	
+}
+	
+}
+
+
+@media only screen and (max-width: 500px) {
+.tour{
+	width:100%;
+	display:block; 
+	float:none;
+	margin: 0 autp 30px;
+	}
+img.rc{
+	border:0;
+	width: 100%;
+	height: auto;
+	margin:0 auto 20px;
+	float:none;
+	}	
+img.g{
+	float:none;
+	display:block;
+	margin:0 auto 15px;
+	}
+	
+.b_nav a{
+    display:inline-block;
+    padding:3px 7px;
+	text-decoration: none;
+	color:#333;
+	line-height:1;
+}	
+	
+}
+
+
+
+
+
+
+/*----------   DROP DPWN NAVIGATION   --------------------------------------------------------------------------------*/
+
+
+
+/*header*/
+ 
+header {
+    background: #1c1c1c;
+    padding: 15px 20px;
+}
+ 
+        /*shorter clearfix http://nicolasgallagher.com/micro-clearfix-hack/*/
+        header:before,
+        header:after {
+            content:"";
+            display:table;
+        }
+         
+        header:after {
+            clear:both;
+        }
+         
+        /* For IE 6/7 (trigger hasLayout) */
+        header {
+            zoom:1;
+        }
+ 
+h1.logo a {
+    color: #d8d8d8;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 22px;
+    float: left;
+    letter-spacing: 0.2em;
+}
+ 
+a.to_nav {
+    float: right;
+    color: #fff;
+    background: #4e4e4e;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 22px;
+    height: 22px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+ 
+a.to_nav:hover,
+a.to_nav:focus {
+    color: #1c1c1c;
+    background: #ccc;
+}
+
+#primary_nav li.top {
+    display: none;
+}
+
+
+
+
+/*navigation*/ 
+ 
+#primary_nav ul {
+    list-style: none;
+    background: #1c1c1c;
+    padding: 5px 0;
+}
+ 
+#primary_nav li a {
+    display: block;
+    padding: 0 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    height: 2em;
+    border-bottom: 1px solid #383838;
+}
+ 
+#primary_nav li:last-child a {
+    border-bottom: none;
+}
+ 
+#primary_nav li a:hover,
+#primary_nav li a:focus {
+    color: #1c1c1c;
+    background: #ccc;
+}
+ 
+/*footer*/
+ 
+footer {
+    text-align: center;
+    font-size: 14px;
+}
+
+#primary_nav li.top {
+    display: none;
+}
+
+@media only screen and (min-width: 768px) {
+ 
+    a.to_nav {
+        display: none;
+    }
+     
+    .wrapper {
+        position: relative;
+        width: 980px;
+        margin: 0 auto;
+    }
+     
+    #primary_nav {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        background: none;
+    }
+     
+    #primary_nav li {
+        display: inline;
+    }
+     
+    #primary_nav li a {
+        float: left;
+        border: none;
+        padding: 0 10px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+ 
+}
